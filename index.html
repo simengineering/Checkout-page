@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+
+    <meta charset="UTF-8">
+
+    <title>Checkout Page</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  </head>
+  <body>
+
+    <header>
+
+      <button type="button" class="box">Go back</button>
+      <img src="images/logo.png" alt="">
+      <button type="button" class="box">Sign in</button>
+
+    </header>
+
+    <main>
+
+      <form action="#" method="post">
+
+        <section class="orderSection">
+
+          <div class="orderWrapper">
+
+            <div class="orderSummary">
+              <h3>Your order</h3>
+              <table>
+                <tr>
+                  <th>Items</th>
+                  <th>Details</th>
+                  <th>Price</th>
+                  <th>Delivery</th>
+                </tr>
+                <tr>
+                  <td>2 documents</td>
+                  <td>2 languages</td>
+                  <td>$ 696.06</td>
+                  <td>48 hours*</td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="orderButtons">
+              <input type="submit" class="box" name="placeOrder" value="Place Order">
+              <button class="box printButton" type="button">Print a quote</button>
+            </div>
+
+          </div>
+
+          <div class="helpCenter">
+            <h3>Help center</h3>
+            <p>If you need assistance while placing your order, contact one of our beloved Project Manager by phone or email.</p>
+            <address>
+              <a href="tel:+971(0)555555">+971(0)555 555</a>
+              <a href="mailto:help@qtest.com">help@qtest.com</a>
+            </address>
+          </div>
+
+        </section>
+
+        <fieldset class="typeOfDocument">
+
+          <h1>Select what you want to translate</h1>
+
+          <div class="choicesWrapper">
+
+            <input type="radio" id="website" name="toTranslate" value="website" required>
+            <label for="website" class="box">Website</label>
+
+            <input type="radio" id="doc" name="toTranslate" value="doc">
+            <label for="doc" class="box">Documents</label>
+
+            <input type="radio" id="account" name="toTranslate" value="account">
+            <label for="account" class="box">Social Account</label>
+
+          </div>
+
+        </fieldset>
+
+        <fieldset class="uploads">
+
+          <h2>Upload your documents<span>(Doc, Docx, Text, PDF, Markdown)</span></h2>
+
+          <input type="file" name="user_files" id="file" multiple hidden accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required>
+          <label for="file" class="box">Upload a new file</label>
+
+          <table class="box">
+            <tr>
+              <th>File Name</th>
+              <th>File Size</th>
+              <th>Number of words</th>
+              <th>Remove</th>
+            </tr>
+            <tr>
+              <td>business_operations.docx</td>
+              <td>78kb</td>
+              <td>842</td>
+              <td>
+                <button type="button" class="trash"></button>
+              </td>
+            </tr>
+            <tr>
+              <td>business_financial.docx</td>
+              <td>26kb</td>
+              <td>2326</td>
+              <td>
+                <button type="button" class="trash"></button>
+              </td>
+            </tr>
+          </table>
+
+        </fieldset>
+
+        <fieldset>
+
+          <h2>Choose your languages pairings</h2>
+
+          <div class="selectWrapper">
+
+            <p>FROM</p>
+
+            <select name="initialLanguage" class="box">
+              <option value="EN">English</option>
+              <option value="FR">French</option>
+              <option value="UK" selected>Ukrainian</option>
+              <option value="FR">Italian</option>
+            </select>
+
+          </div>
+
+          <div class="selectWrapper">
+
+            <p>TO</p>
+
+            <select name="resultLanguage_1" class="box">
+              <option value="EN">English</option>
+              <option value="FR" selected>French</option>
+              <option value="UK">Ukrainian</option>
+              <option value="FR">Italian</option>
+            </select>
+
+            <select name="resultLanguage_2" class="box">
+              <option value="EN" selected>English</option>
+              <option value="FR">French</option>
+              <option value="UK">Ukrainian</option>
+              <option value="FR">Italian</option>
+            </select>
+
+            <button type="button" class="trash"></button>
+
+            <button type="button" class="box">Add</button>
+
+          </div>
+
+        </fieldset>
+
+        <fieldset class="tone">
+
+          <h2>Select your desired tone</h2>
+
+          <div class="choicesWrapper">
+
+            <input type="radio" id="casual" name="desiredTone" value="casual" required>
+            <label for="casual" class="box">Friendly / Casual</label>
+
+            <input type="radio" id="pro" name="desiredTone" value="pro">
+            <label for="pro" class="box">Corporate / Pro</label>
+
+            <input type="radio" id="formal" name="desiredTone" value="formal">
+            <label for="formal" class="box">Media / Formal</label>
+
+          </div>
+
+        </fieldset>
+
+        <fieldset class="urgency">
+
+          <h2>Tell us how urgent this job is</h2>
+
+          <div class="choicesWrapper">
+
+            <input type="range" name="urgent" min="-10" max="10" step="5" value="0">
+
+            <ul>
+              <li>I got time</li>
+              <li><strong>Average</strong></li>
+              <li>Yesterday</li>
+            </ul>
+
+            <div class="box">
+              <h3>Timeline Info</h3>
+              <p>With an <strong>average</strong> timeline set up, our expert translator can take a reasonable amount of time perfecting tour translation</p>
+            </div>
+
+          </div>
+
+        </fieldset>
+
+        <fieldset class="signUp">
+
+          <h2>Sign up and choose a payment method</h2>
+
+          <p>Already have an account with us? <a href="#">Sign in</a>.</p>
+
+          <div class="personalInfo">
+
+            <p>
+              <label for="name">Full Name</label>
+              <input type="text" name="name" class="box" id="name" pattern="[A-Za-z' -]+" minlength="2" maxlength="50" required placeholder=" ">
+            </p>
+
+            <p>
+              <label for="email">Email Adress</label>
+              <input type="email" name="email" class="box" id="email"  pattern="[A-Za-z0-9._-]+@[a-z]+\.[a-z]{2,4}$" required placeholder=" ">
+            </p>
+
+            <p>
+             <label for="password">Choose a Password</label>
+              <input type="password" name="password" class="box" id="password" required pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder=" ">
+            </p>
+
+          </div>
+
+          <div class="choicesWrapper paymentType">
+
+            <input type="radio" id="visa" name="payment" value="visa" required>
+            <label for="visa" class="box"></label>
+
+            <input type="radio" id="payPal" name="payment" value="payPal">
+            <label for="payPal" class="box"></label>
+
+            <input type="radio" id="amazon" name="payment" value="amazon">
+            <label for="amazon" class="box"></label>
+
+          </div>
+
+          <div class="choicesWrapper paymentInfo">
+
+            <p>
+              <label for="number">Card Number</label>
+              <input type="text" name="cardNumber" class="box" id="number" pattern="[0-9]{16}" required>
+            </p>
+
+            <p>
+              <label for="date">Expiry Date</label>
+              <input type="date" name="expiryDate" class="box" id="date" required>
+            </p>
+
+            <p>
+              <label for="code">Code</label>
+              <input type="text" name="code" class="box" id="code" pattern="[0-9]{3}" required>
+            </p>
+
+          </div>
+
+        </fieldset>
+
+        <div class="summingWrapper">
+
+          <input type="checkbox" name="agreement" value="agree" id="agreement" required>
+          <label for="agreement">I agree to the <a href="#">Terms &amp; Conditions</a></label>
+
+          <input type="submit" class="box" name="placeOrder" value="Place Order">
+
+          <button class="box printButton" type="button">Print a quote</button>
+
+        </div>
+
+      </form>
+
+    </main>
+
+    <footer>
+
+      <aside class="whatWeDo">
+        <h3>What we do</h3>
+        <p>We provide a full range of language services including content development, document, website and social media accounts translations.</p>
+      </aside>
+
+      <div class="office">
+        <h3>Our maain office</h3>
+        <address>
+          <ul>
+            <li>Dubai, UAE</li>
+            <li>P.O. Box: 502735</li>
+            <li>Phone: <a href="tel:+971(0)44278128">+971(0)44278128</a></li>
+          </ul>
+        </address>
+      </div>
+
+      <div class="contacts">
+        <h3>Connect with us</h3>
+        <ul>
+          <li><a href="#">Facebbok</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Linkedin</a></li>
+        </ul>
+      </div>
+
+      <img src="images/logo_footer.png" alt="">
+
+    </footer>
+
+  </body>
+</html>
