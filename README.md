@@ -21,3 +21,5 @@
 ### TODO
 
 * Make responsive
+
+[Demo](https://letushev.github.io/Checkout-page/)
